@@ -6,3 +6,4 @@ a pagina de perfil
 opção de log out
 
 Bugs:
+Quando coloca pra fazer o login ele da erro quando pede email e senha
