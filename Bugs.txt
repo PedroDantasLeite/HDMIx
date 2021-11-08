@@ -1,10 +1,8 @@
 Ainda não implementado:
-A pagina de stream
-a pagina de feedback
 as preferencias do usuario
 a pagina de perfil
-opção de log out
 
 Bugs:
 Quando coloca pra fazer o login ele da erro quando pede email e senha
 Não da para dar logout quando entramos na pagina principal
+O cadastro não checka se outra conta igual, com o mesmo email existe
