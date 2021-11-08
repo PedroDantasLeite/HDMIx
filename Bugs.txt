@@ -1,1 +1,8 @@
+Ainda não implementado:
+A pagina de stream
+a pagina de feedback
+as preferencias do usuario
+a pagina de perfil
+opção de log out
 
+Bugs:
