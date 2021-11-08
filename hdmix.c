@@ -6,6 +6,7 @@ int login (char *email, char *senha) {
   int fim = 0;
 
   arq = fopen ("LOGINS.txt", "r");
+  rewind(arq);
   char fMail[15], fSenha[15];
   while (fscanf(arq, "%s %s", fMail, fSenha) != EOF) {
 
@@ -53,3 +54,18 @@ void addLogin (char *nome, char *snome, char *senha, char *email, char *idade) {
   
 
 }
+
+/*
+void verPerf (char *email) {
+  FILE *arq;
+
+  arq = fopen ("LOGINS.txt", "r");
+  char fMail[15];
+  while ( fscanf(arq, "%s", fMail) != EOF ) {
+
+    if (strcmp(email, fMail))
+
+  }
+
+
+}*/
