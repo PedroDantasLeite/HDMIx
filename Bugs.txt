@@ -3,7 +3,4 @@ as preferencias do usuario
 a pagina de perfil
 
 Bugs:
-Quando coloca pra fazer o login ele da erro quando pede email e senha
-Não da para dar logout quando entramos na pagina principal
-O cadastro não checka se outra conta igual, com o mesmo email existe
 voltar a pagina principal esta indo para landing page, e não a pagina principal
