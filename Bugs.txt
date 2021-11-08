@@ -7,3 +7,4 @@ opção de log out
 
 Bugs:
 Quando coloca pra fazer o login ele da erro quando pede email e senha
+Não da para dar logout quando entramos na pagina principal
