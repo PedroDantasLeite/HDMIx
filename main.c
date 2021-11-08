@@ -25,10 +25,11 @@ int main(void) {
             }
             else {
                 goLogin();
+                break;
             }
         }
-        opção = 0;
-        while(opção != 1 && opção != 2 && opção != 3 && opção != 4){
+        opção = 1;
+        while(opção == 1 || opção == 2 || opção == 3 || opção == 4){
             printf("### Home Page  ###\n");
             printf("Aqui, você está informado\ndos eventos e das noticias\n atuais, além de ficar por dentro das novidades da TVPE\n");
             printf("Digite 1 para acessar se perfil\n");
@@ -38,6 +39,7 @@ int main(void) {
             scanf("%d", &opção);
             if(opção != 1 && opção != 2 && opção != 3 && opção != 4){
                 printf("Opção invalida. tente novamente.\n");
+                opção = 1;
                 continue;
             }
             else if(opção == 1){
@@ -53,7 +55,7 @@ int main(void) {
                 continue;
             }
             else if (opção == 4){
-                opção = 1;
+                opção = 0;
                 printf("Você saiu da sua conta\n");
             }
         }
@@ -88,7 +90,7 @@ void goLogin(){
                 break;
             }
             else{
-                printf("Falha\n");
+                printf("Falha, conta não encontrada\n");
                 continue;
             }
 
@@ -129,14 +131,18 @@ void goFeedback(){
     printf("Aqui, o usuario poderia comentar e especificar as suas queixas ou seus elogias ao conteudo apresentado pela TVPE. Além disso, podeira também sugerir mudanças que ele gostaria de ver acontecer no canal.\nDigite:\n1- Para voltar a pagina principal\n");
     scanf("%d",&opção);
     getchar();
+    opção = 1;
 }
 void goStream(){
     int opção;
-    printf("Aqui o usuario poderia assistir a um catagolo de programas apresentando pela TVPE, além de ter sua programação sendo apresentanda ao vivo pelo site. O usuario também pode apresenter feedback ao canal caso se sinta confortavel em avaliar o conteudo da programação\nDigite:\n1- Para voltar a pagina principal\n2- Para ir a pagina de feedback");
+    printf("Aqui o usuario poderia assistir a um catagolo de programas apresentando pela TVPE, além de ter sua programação sendo apresentanda ao vivo pelo site. O usuario também pode apresenter feedback ao canal caso se sinta confortavel em avaliar o conteudo da programação\nDigite:\n1- Para voltar a pagina principal\n2- Para ir a pagina de feedback\n");
     scanf("%d",&opção);
     getchar();
     if ( opção == 2){
         goFeedback();
+    }
+    else {
+        opção = 1;
     }
 }
 void goPerfil(){
