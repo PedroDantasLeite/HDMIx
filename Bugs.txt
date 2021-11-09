@@ -1,6 +1,6 @@
 Ainda não implementado:
 as preferencias do usuario
-a pagina de perfil
+pagina de  feedback funcional
 
 Bugs:
-COntas com letras apos o @, não entram
+
