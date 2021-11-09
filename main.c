@@ -4,7 +4,7 @@
 #include "hdmix.h"
 
 const char* goLogin();
-void goFeedback();
+void goFeedback(char *email);
 void goStream();
 void goPerfil(char *email);
 char email[100];
@@ -39,6 +39,7 @@ int main(void) {
             printf("Digite 3 para dar avaliar o site/ sua programação\n");
             printf("Digite 4 para sair de sua conta (logout)\n");
             scanf("%d", &opção);
+            getchar();
             if(opção != 1 && opção != 2 && opção != 3 && opção != 4){
                 printf("Opção invalida. tente novamente.\n");
                 opção = 1;
@@ -53,7 +54,7 @@ int main(void) {
                 continue;
             }
             else if (opção == 3){
-                goFeedback();
+                goFeedback(email);
                 continue;
             }
             else if (opção == 4){
@@ -127,20 +128,19 @@ const char* goLogin(){
 
 }
 
-void goFeedback(){
-    int opção;
-    printf("Aqui, o usuario poderia comentar e especificar as suas queixas ou seus elogias ao conteudo apresentado pela TVPE. Além disso, podeira também sugerir mudanças que ele gostaria de ver acontecer no canal.\nDigite:\n1- Para voltar a pagina principal\n");
-    scanf("%d",&opção);
-    getchar();
-    opção = 1;
+void goFeedback(char *email){
+    char feedback[100];
+    printf("Aqui, o usuario poderá comentar e especificar as suas queixas ou seus elogios ao conteudo apresentado pela TVPE. Além disso, poderá também sugerir mudanças que ele gostaria de ver implementadas no canal.\nDigite seu feedback quanto a programção:\n");
+    fgets(feedback,100,stdin);
+    feedBack(email, feedback);
 }
 void goStream(){
     int opção;
-    printf("Aqui o usuario poderia assistir a um catagolo de programas apresentando pela TVPE, além de ter sua programação sendo apresentanda ao vivo pelo site. O usuario também pode apresenter feedback ao canal caso se sinta confortavel em avaliar o conteudo da programação\nDigite:\n1- Para voltar a pagina principal\n2- Para ir a pagina de feedback\n");
+    printf("Aqui o usuario poderá assistir a um catagolo de programas apresentando pela TVPE, além de ter sua programação sendo apresentanda ao vivo pelo site. O usuario também pode apresenter feedback ao canal caso se sinta confortavel em avaliar o conteudo da programação\nDigite:\n1- Para voltar a pagina principal\n2- Para ir a pagina de feedback\n");
     scanf("%d",&opção);
     getchar();
     if ( opção == 2){
-        goFeedback();
+        goFeedback(email);
     }
     else {
         opção = 1;
