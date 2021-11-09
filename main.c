@@ -2,10 +2,12 @@
 #include <string.h>
 #include <stdlib.h>
 #include "hdmix.h"
-void goLogin();
+
+const char* goLogin();
 void goFeedback();
 void goStream();
-void goPerfil();
+void goPerfil(char *email);
+char email[100];
 
 int main(void) {
     int opção = 0;
@@ -24,7 +26,7 @@ int main(void) {
                 continue;
             }
             else {
-                goLogin();
+                const char* email = goLogin();
                 break;
             }
         }
@@ -43,7 +45,7 @@ int main(void) {
                 continue;
             }
             else if(opção == 1){
-                goPerfil();
+                goPerfil(email);
                 continue;
             }
             else if (opção == 2){
@@ -65,10 +67,9 @@ int main(void) {
   return 0;
 }
 
-void goLogin(){
+const char* goLogin(){
     int opção;
     char senha [100];
-    char email [100];
     while (opção != 1 || opção != 2){
         printf("### Login/Cadastro ###\n");
         printf("Você deseja dar login ou criar uma conta?\n1- Login\n2- Sign in\n");
@@ -87,7 +88,7 @@ void goLogin(){
             getchar();
             if (login (email, senha) == 1){
                 printf("Sucesso!\n");
-                break;
+                return email;
             }
             else{
                 printf("Falha, conta não encontrada\n");
@@ -114,7 +115,7 @@ void goLogin(){
                 scanf("%s",data);
                 getchar();
                 addLogin (pnome, snome, senha, email, data);
-                break;
+                return email;
             }
             else{
                 printf("Email ja utilizado, tente novamente\n");
@@ -145,6 +146,6 @@ void goStream(){
         opção = 1;
     }
 }
-void goPerfil(){
-    printf("a");
+void goPerfil(char *email){
+    verPerf (email);
 }
