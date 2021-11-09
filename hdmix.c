@@ -68,6 +68,18 @@ void verPerf (char *email) {
     }
 
   }
+  
+  fclose (arq);
+
+}
+
+void feedBack (char *email, char *feedback) {
+  FILE *arq;
+
+  arq = fopen ("FEEDBACK.txt", "at");
+
+  fprintf (arq, " --- Email: %s --- \n%s \n", email, feedback);
+
   fclose (arq);
 
 }
