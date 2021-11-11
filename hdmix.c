@@ -7,7 +7,7 @@ int login (char *email, char *senha) {
 
   arq = fopen ("LOGINS.txt", "r");
   rewind(arq);
-  char fMail[15], fSenha[15], me[15], mi[15], mo[15];
+  char fMail[100], fSenha[100], me[100], mi[100], mo[100];
   while (fscanf(arq, "%s %s %s %s %s", fMail, fSenha, me, mi, mo) != EOF) {
 
     if (strcmp(email, fMail) == 0) {
@@ -30,7 +30,7 @@ int exLogin (char *email) {
 
   arq = fopen ("LOGINS.txt", "r");
   rewind(arq);
-  char fMail[15];
+  char fMail[100];
   while ( fscanf(arq, "%s", fMail) != EOF) {
 
     if (strcmp(email, fMail) == 0) {
@@ -60,7 +60,7 @@ void verPerf (char *email) {
   FILE *arq;
 
   arq = fopen ("LOGINS.txt", "r");
-  char fMail[15], fSenha[15], fNome[15], fSnome[15], fData[15];
+  char fMail[100], fSenha[100], fNome[100], fSnome[100], fData[100];
   while (fscanf(arq, "%s %s %s %s %s", fMail, fSenha, fNome, fSnome, fData) != EOF ) {
 
     if (strcmp(email, fMail) == 0) {
