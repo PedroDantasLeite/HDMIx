@@ -7,8 +7,8 @@ int login (char *email, char *senha) {
 
   arq = fopen ("LOGINS.txt", "r");
   rewind(arq);
-  char fMail[100], fSenha[100], me[100], mi[100], mo[100];
-  while (fscanf(arq, "%s %s %s %s %s", fMail, fSenha, me, mi, mo) != EOF) {
+  char fMail[100], fSenha[100], nome[100], snome[100], idade[100];
+  while (fscanf(arq, "%s %s %s %s %s", fMail, fSenha, nome, snome, idade) != EOF) {
 
     if (strcmp(email, fMail) == 0) {
       if (strcmp(senha, fSenha) == 0) {
