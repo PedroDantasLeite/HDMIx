@@ -5,19 +5,20 @@
 
 const char* goLogin();
 void goFeedback(char *email);
-void goStream();
+void goStream(int pag);
 void goPerfil(char *email);
 char email[100];
 
 int main(void) {
-    int opção = 0;
+    int opção = 0,pag = 0;
     while (1){
         opção = 0;
+        pag = 0;
         while(opção != 1 && opção != 2 && opção != 3){
             printf("### Landing Page ###\n");
             printf("Aqui, você está informado dos eventos e das noticias atuais, além de ficar por dentro das novidades da TVPE\n");
             printf("Digite 1 para ir a tela de login\n");
-            printf("Digite 2 para ir a stream (levara para a tela de login, já que sua conta não está logada\n");
+            printf("Digite 2 para ir a stream \n");
             printf("Digite 3 para dar avaliar o site/ sua programação (levará também a tela de login\n");
             scanf("%d", &opção);
             getchar();
@@ -25,12 +26,16 @@ int main(void) {
                 printf("Opção indisponivel, tente novamente\n");
                 continue;
             }
-            else {
+            if  (opção == 1){
                 const char* email = goLogin();
                 break;
             }
+            if(opção == 2){
+                goStream(pag);
+            }
         }
         opção = 1;
+        pag = 1;
         while(opção == 1 || opção == 2 || opção == 3 || opção == 4){
             printf("### Home Page  ###\n");
             printf("Aqui, você está informado\ndos eventos e das noticias\n atuais, além de ficar por dentro das novidades da TVPE\n");
@@ -50,7 +55,7 @@ int main(void) {
                 continue;
             }
             else if (opção == 2){
-                goStream();
+                goStream(pag);
                 continue;
             }
             else if (opção == 3){
@@ -134,13 +139,18 @@ void goFeedback(char *email){
     fgets(feedback,100,stdin);
     feedBack(email, feedback);
 }
-void goStream(){
+void goStream(pag){
     int opção;
     printf("Aqui o usuario poderá assistir a um catagolo de programas apresentando pela TVPE, além de ter sua programação sendo apresentanda ao vivo pelo site. O usuario também pode apresenter feedback ao canal caso se sinta confortavel em avaliar o conteudo da programação\nDigite:\n1- Para voltar a pagina principal\n2- Para ir a pagina de feedback\n");
     scanf("%d",&opção);
     getchar();
-    if ( opção == 2){
+    if (opção == 2){
+        if (pag == 1){
         goFeedback(email);
+        }
+        else{
+          goLogin();
+        }
     }
     else {
         opção = 1;
