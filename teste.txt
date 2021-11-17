@@ -2,3 +2,5 @@
 Abrir o site, criar uma conta, dar login nessa conta, abrir uma stream e deixa feedback
 Abrir o site, tentar entrar na stream, criar conta, deixar feedback
 Abrir o site, criar conta, dar login, sair da conta, criar conta 2, dar login em conta 2
+Deixar feedback e assistir a stream sem a necessadidade de uma cota
+
