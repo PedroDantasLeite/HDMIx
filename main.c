@@ -19,19 +19,28 @@ int main(void) {
             printf("Aqui, você está informado dos eventos e das noticias atuais, além de ficar por dentro das novidades da TVPE\n");
             printf("Digite 1 para ir a tela de login\n");
             printf("Digite 2 para ir a stream \n");
-            printf("Digite 3 para dar avaliar o site/ sua programação (levará também a tela de login\n");
+            printf("Digite 3 para dar avaliar o site/ sua programação\n");
             scanf("%d", &opção);
             getchar();
             if (opção != 1 && opção != 2 && opção != 3){
                 printf("Opção indisponivel, tente novamente\n");
                 continue;
             }
-            if  (opção == 1){
+            else if  (opção == 1){
                 const char* email = goLogin();
                 break;
             }
-            if(opção == 2){
+            else if(opção == 2){
                 goStream(pag);
+                opção = 0;
+            }
+            else if(opção == 3){
+              char auxEmail[100];
+              printf("Primeiro, digite seu email antes de avaliar a programação:\n");
+              scanf("%s",auxEmail);
+              getchar();
+              goFeedback(auxEmail);
+              opção = 0;
             }
         }
         opção = 1;
@@ -149,12 +158,14 @@ void goStream(pag){
         goFeedback(email);
         }
         else{
-          goLogin();
+          char auxEmail[100];
+          printf("Primeiro, digite seu email antes de avaliar a programação:\n");
+          scanf("%s",auxEmail);
+          getchar();
+          goFeedback(auxEmail);
         }
     }
-    else {
-        opção = 1;
-    }
+
 }
 void goPerfil(char *email){
     verPerf (email);
