@@ -15,3 +15,6 @@ Membros:\
     Gabriel Vasconcelos Corrêa Gondim\
 Coordenador: Guilherme Pereira\
 \
+Documentação:
+Programa feito em C para emular o funcionamento de um site. 
+
