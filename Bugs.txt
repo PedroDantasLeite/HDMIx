@@ -1,6 +1,5 @@
-Ainda não implementado:
-as preferencias do usuario
-pagina de  feedback funcional
 
+Ainda não implementado:
+Basear no prototipo de media para implemetentação de codigo
 Bugs:
 
