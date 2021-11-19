@@ -7,7 +7,6 @@ Membros:\
   CC:\
     Luiz Fernando Paes de Barros Presta\
     Pedro Dantas Leite\
-    Caio Calado de Araújo\
   Design:\
     Justine Cavalcanti Santos\
     Maria Julia Wendy Parente Soares\
