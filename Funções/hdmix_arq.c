@@ -11,6 +11,7 @@ int login (char *email, char *senha) {
   while (fscanf(arq, "%s %s %s %s %s", fMail, fSenha, nome, snome, idade) != EOF) {
 
     if (strcmp(email, fMail) == 0) {
+      
       if (strcmp(senha, fSenha) == 0) {
       
         fim = 1;
