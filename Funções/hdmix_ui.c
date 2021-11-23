@@ -4,6 +4,7 @@
 #include "hdmix_arq.h"
 
 char email[100];
+int pag;
 
 const char* goLogin(){
     int opcao;
