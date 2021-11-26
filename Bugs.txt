@@ -1,5 +1,5 @@
 
 Ainda não implementado:
-Basear no prototipo de media para implemetentação de codigo
+
 Bugs:
 
