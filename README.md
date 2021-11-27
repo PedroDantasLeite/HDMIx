@@ -33,3 +33,11 @@ int login (char *email, char *senha) - Verifica se o email existe e se a senha e
 void feedBack (char *email, char *feedback) - Adiciona o feedback no FEEDBACK.txt\
 int exLogin (char *email) - Verifica se já existe um login durante a criação da conta.\
 void verPerf (char *email) - Verifica se o perfil da pessoa existe e imprime seu contéudo.\
+
+Arquivos txt: Utilizamos de 4 arquivos de texto, 2 para documentação e os outros para armazenamento de dados adquiridos na execução do código.
+
+Bugs.txt -- Uma forma de registrar os bugs que estão aparecendo no código
+FEEDBACK.txt -- Arquivo que vai registrar o email e feedback do usuario 
+LOGINS.txt -- Registro dos dados de todos os usuários registrados na plataforma, organizados por email, senha, nome, sobrenome e data respectivamente
+Testes.txt -- Documentação dos testes elaborados para a construção do código
+
